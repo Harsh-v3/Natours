@@ -13,11 +13,12 @@ Dark green : #28b485 ;
 
 body {
   font-family: 'Lato', sans-serif;
-  font-size: 62.5%;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 1.8rem;
+  padding: 1rem;
+  padding: 32px;
 }
 
 .header {
@@ -32,4 +33,75 @@ body {
   background-size: cover;
 
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+}
+
+.heading-primary-main {
+  font-size: 60px;
+  font-weight: 400;
+  display: block;
+  letter-spacing: 35px;
+
+  animation: MoveInLeft 1s ease-out;
+}
+
+.heading-primary-sub {
+  font-size: 20px;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+
+  animation: MoveInRight 1s ease-out;
+}
+
+@keyframes MoveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes MoveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
