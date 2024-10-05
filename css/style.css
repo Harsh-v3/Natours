@@ -9,50 +9,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3.2rem;
   box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../Resourses/images/hero.jpg);
-  background-position: center;
-  background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  position: relative; }
-  .header__logo {
-    height: 3.5rem; }
-    .header__logo-box {
-      position: absolute;
-      top: 4rem;
-      left: 4rem; }
-  .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    font-size: 6rem;
-    font-weight: 400;
-    display: block;
-    letter-spacing: 3.5rem;
-    animation: MoveInLeft 1s ease-out; }
-  .heading-primary--sub {
-    font-size: 2rem;
-    font-weight: 700;
-    display: block;
-    letter-spacing: 1.74rem;
-    animation: MoveInRight 1s ease-out; }
 
 @keyframes MoveInLeft {
   0% {
@@ -81,6 +38,52 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    font-size: 6rem;
+    font-weight: 400;
+    display: block;
+    letter-spacing: 3.5rem;
+    animation: MoveInLeft 1s ease-out; }
+  .heading-primary--sub {
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 1.74rem;
+    animation: MoveInRight 1s ease-out; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+  letter-spacing: 2px; }
+  .heading-secondary:hover {
+    transform: scale(1.02) translateY(-1rem);
+    cursor: pointer;
+    filter: drop-shadow(0 2rem 1rem rgba(0, 0, 0, 0.2)); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
 
 .btn:link, .btn:visited {
   font-size: 1.6rem;
@@ -126,3 +129,54 @@ body {
 .btn--animated {
   animation: MoveToUp 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../Resourses/images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative; }
+  .header__logo {
+    height: 3.5rem; }
+    .header__logo-box {
+      position: absolute;
+      top: 4rem;
+      left: 4rem; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 2rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 2rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 2rem) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 2rem) / 4); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 2rem) / 3) + 2rem); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 2rem) / 4) + 2rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 2rem) / 4) + 2 * 2rem); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
