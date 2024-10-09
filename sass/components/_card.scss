@@ -1,0 +1,222 @@
+.card {
+  // To create a presepective animation :
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  position: relative;
+  height: 50rem;
+
+  // Card Sides :
+  &__side {
+    font-size: 2rem;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: all 0.8s ease;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    // Size Of Sides (not the card) :
+    height: inherit;
+    width: 100%;
+
+    // To correct the position of both sides :
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    // To Hide the back part of the card :
+    backface-visibility: hidden;
+
+    // Front side :
+    &--front {
+      background: $color-white;
+    }
+
+    // Back side :
+    &--back {
+      // already rotated in starting , back side:
+      transform: rotateY(180deg);
+
+      // Back Side Gradient for Card #1 :
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+
+      // Back Side Gradient for Card #2 :
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+
+      // Back Side Gradient for Card #3 :
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+    }
+  }
+
+  // On Hover :
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover &__side--front {
+    // rotate to the back
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    // rotate to the front
+    transform: rotateY(0);
+  }
+
+  // FRONT SIDE :
+  &__image {
+    background-size: cover;
+    background-position: center;
+    height: 23rem;
+    // Image Blending :
+    background-blend-mode: screen;
+
+    // Image of Card #1:
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url("../../Resourses/images/nat-5.jpg");
+    }
+
+    // Image of Card #2:
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url("../../Resourses/images/nat-6.jpg");
+    }
+
+    // Image of Card #3:
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url("../../Resourses/images/nat-7.jpg");
+    }
+  }
+
+  // Heading Text of Card :
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    width: 75%;
+    color: $color-white;
+
+    // Position of Text
+    position: absolute;
+    top: 15rem;
+    right: 1rem;
+  }
+
+  // Heading Background :
+  &__heading-span {
+    padding: 1rem 1.5rem;
+
+    // Box Declaratioin Property :
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    // Background for Heading of Card #1
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+
+    // Background for Heading of Card #2
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+
+    // Background for Heading of Card #3
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
+  }
+
+  // Detils Of Card :
+  &__text {
+    text-transform: capitalize;
+    padding: 3rem;
+
+    // List :
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      // Items / Content :
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        // Apply bottom border expect last one line:
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light-2;
+        }
+      }
+    }
+  }
+
+  // BACK SIDE :
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price {
+    color: $color-white;
+    margin-bottom: 8rem;
+
+    &-only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    &-value {
+      font-size: 6rem;
+      font-weight: 100;
+    }
+  }
+}
