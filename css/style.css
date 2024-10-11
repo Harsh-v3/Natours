@@ -149,11 +149,11 @@ body {
     height: 23rem;
     background-blend-mode: screen; }
     .card__image--1 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../Resourses/images/nat-5.jpg"); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/Resourses/images/nat-5.jpg"); }
     .card__image--2 {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../Resourses/images/nat-6.jpg"); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("/Resourses/images/nat-6.jpg"); }
     .card__image--3 {
-      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../Resourses/images/nat-7.jpg"); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("/Resourses/images/nat-7.jpg"); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -207,25 +207,48 @@ body {
 .story {
   width: 75%;
   padding: 6rem;
-  padding-left: 9rem;
   margin: 0 auto;
+  cursor: pointer;
+  padding-left: 9rem;
   border-radius: 3px;
+  transform: skewX(-12deg);
   font-size: 1.6rem;
-  background-color: #fff;
-  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  transform: skewX(-12deg); }
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1); }
   .story > * {
     transform: skewX(12deg); }
   .story__shape {
     width: 15rem;
     height: 15rem;
+    position: relative;
     background-color: lightcyan;
     float: left;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg); }
   .story__img {
-    height: 100%; }
+    height: 100%;
+    transform: translateX(-4rem) scale(1.2);
+    backface-visibility: hidden;
+    transition: all 0.3s ease-in-out; }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
 
 .btn:link, .btn:visited {
   font-size: 1.6rem;
@@ -295,6 +318,20 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 15%;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -412,5 +449,5 @@ body {
   margin-top: -7rem; }
 
 .section-stories {
-  background-color: #f7f7f7;
-  padding: 15rem 0; }
+  padding: 15rem 0;
+  position: relative; }
