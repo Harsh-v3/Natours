@@ -3,21 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <!-- favicon -->
     <link
       rel="shortcut icon"
       type="image/png"
       href="./Resourses/images/favicon.png"
     />
+    <!-- style sheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/icon-font.css.css" />
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
-    <header class="header">
+    <!-- navigation functionality -->
+    <div class="navigation" id="navigation">
+      <input
+        type="checkbox"
+        name="navigation-toggle"
+        id="navigation-toggle"
+        class="navigation__checkbox"
+      />
+
+      <label for="navigation-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <!-- like overlay -->
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list u-center-text">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">
+              <span>01</span> About Natours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">
+              <span>02</span> Your benfits</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">
+              <span>03</span> Popular tours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"> <span>04</span> Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"> <span>05</span> Book now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- landing page / header -->
+    <header class="header" id="header">
       <div class="header__logo-box">
         <img
           src="Resourses/images/logo-white.png"
@@ -35,8 +81,10 @@
       </div>
     </header>
 
+    <!-- main -->
     <main>
-      <section class="section-about">
+      <!-- about section -->
+      <section class="section-about" id="about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Exiciting tours for adventurous people
@@ -85,7 +133,8 @@
         </div>
       </section>
 
-      <section class="section-features">
+      <!-- features section -->
+      <section class="section-features" id="features">
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -95,7 +144,8 @@
               </h3>
               <p class="feature-box__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                voluptate voluptates soluta voluptatem dolor.
+                voluptate voluptates soluta voluptatem dolor. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Modi nam quaerat aliquam!
               </p>
             </div>
           </div>
@@ -108,7 +158,8 @@
               </h3>
               <p class="feature-box__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                voluptate voluptates soluta voluptatem dolor.
+                voluptate voluptates soluta voluptatem dolor. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Modi nam quaerat aliquam!
               </p>
             </div>
           </div>
@@ -121,7 +172,8 @@
               </h3>
               <p class="feature-box__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                voluptate voluptates soluta voluptatem dolor.
+                voluptate voluptates soluta voluptatem dolor. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Modi nam quaerat aliquam!
               </p>
             </div>
           </div>
@@ -134,14 +186,16 @@
               </h3>
               <p class="feature-box__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                voluptate voluptates soluta voluptatem dolor.
+                voluptate voluptates soluta voluptatem dolor. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Modi nam quaerat aliquam!
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section-tours">
+      <!-- tours section -->
+      <section class="section-tours" id="tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">Most popular tours</h2>
         </div>
@@ -167,7 +221,7 @@
                 </div>
               </div>
               <div class="card__side card__side--back card__side--back-1">
-                <div class="card__cta">
+                <div class="card__cta u-center-text">
                   <div class="card__price">
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$299</p>
@@ -197,7 +251,7 @@
                 </div>
               </div>
               <div class="card__side card__side--back card__side--back-2">
-                <div class="card__cta">
+                <div class="card__cta u-center-text">
                   <div class="card__price">
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$499</p>
@@ -227,7 +281,7 @@
                 </div>
               </div>
               <div class="card__side card__side--back card__side--back-3">
-                <div class="card__cta">
+                <div class="card__cta u-center-text">
                   <div class="card__price">
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$699</p>
@@ -245,7 +299,8 @@
         </div>
       </section>
 
-      <section class="section-stories">
+      <!-- stories / testamonial section -->
+      <section class="section-stories" id="stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay loop muted>
             <source src="Resourses/images/video.mp4" type="video/mp4" />
@@ -309,7 +364,8 @@
         </div>
       </section>
 
-      <div class="section-book">
+      <!-- booking / form section -->
+      <div class="section-book" id="book">
         <div class="row">
           <div class="book">
             <div class="book__form">
@@ -377,7 +433,8 @@
       </div>
     </main>
 
-    <footer class="footer">
+    <!-- footer -->
+    <footer class="footer" id="footer">
       <div class="footer__logo-box u-margin-bottom-big">
         <img
           src="Resourses/images/logo-green-2x.png"
@@ -421,40 +478,5 @@
         </div>
       </div>
     </footer>
-    <!-- <section class="grid-test">
-      <div class="row">
-        <div class="col-1-of-2">Col 1 of 2</div>
-        <div class="col-1-of-2">Col 1 of 2</div>
-      </div>
-
-      <div class="row">
-        <div class="col-1-of-3">Col 1 of 3</div>
-        <div class="col-1-of-3">Col 1 of 3</div>
-        <div class="col-1-of-3">Col 1 of 3</div>
-      </div>
-
-      <div class="row">
-        <div class="col-1-of-3">Col 1 of 3</div>
-        <div class="col-2-of-3">Col 2 of 3</div>
-      </div>
-
-      <div class="row">
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-1-of-4">Col 1 of 4</div>
-      </div>
-
-      <div class="row">
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-2-of-4">Col 2 of 4</div>
-      </div>
-
-      <div class="row">
-        <div class="col-1-of-4">Col 1 of 4</div>
-        <div class="col-3-of-4">Col 3 of 4</div>
-      </div>
-    </section> -->
   </body>
 </html>

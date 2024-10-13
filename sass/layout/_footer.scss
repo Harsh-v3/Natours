@@ -38,12 +38,12 @@
 
     &:link,
     &:visited {
+      display: inline-block;
       padding: 0.2rem 0.5rem;
       border-radius: 3px;
       color: $color-gray-light-1;
       text-decoration: none;
       text-transform: uppercase;
-      display: inline-block;
     }
 
     &:hover,
