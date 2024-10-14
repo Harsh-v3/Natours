@@ -4,15 +4,37 @@
 
   &:not(:last-child) {
     margin-bottom: $gutter-verticle;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-verticle-small;
+    }
+  }
+
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 
   @include clearfix;
 
+  // attribute selector
+  // ^ allows us to select only the ones started with col-
+  // $ end
+  // * contain
   [class^="col-"] {
     float: left;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        // no gutter needed when there is only 1 column
+        margin-bottom: $gutter-verticle-small;
+      }
+    }
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
   .col-1-of-2 {
